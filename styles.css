@@ -1,0 +1,154 @@
+:root {
+    --primary50: hsl(260, 100%, 95%);
+    --primary300: hsl(264, 82%, 80%);
+    --primary500: hsl(263, 55%, 52%);
+    --neutral: hsl(0, 0%, 100%);
+    --neutral100: hsl(214, 17%, 92%);
+    --neutral200: hsl(0, 0%, 81%);
+    --neutral400: hsl(224, 10%, 45%);
+    --neutral500: hsl(217, 19%, 35%);
+    --neutralblue: hsl(219, 29%, 14%);
+    --neutralblack: hsl(0, 0%, 7%);
+    --page-background: hsl(214, 17%, 92%);
+
+    --size: 13px;
+    --prweight: 500;
+    --boldweight: 600;
+    --font: 'Barlow Semi Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--size);
+    font-family: var(--font);
+    background: var(--page-background);
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.purple {
+    border: 2px solid var(--primary300);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.big-container {
+    margin: 5rem 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+}
+
+.description {
+    opacity: 0.7;
+}
+
+.status {
+    opacity: 0.5;
+}
+
+.first {
+    background-color: var(--primary500);
+    color: var(--neutral);
+
+}
+
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.second {
+    background-color: var(--neutral400);
+    color: var(--neutral);
+}
+
+.third {
+    background-color: var(--neutral);
+    color: var(--neutral500);
+}
+
+.fourth {
+    background-color: var(--neutralblue);
+    color: var(--neutral);
+}
+
+.fifth {
+    background-color: var(--neutral);
+    color: var(--neutral500);
+}
+
+.main {
+    font-size: 1.2rem;
+}
+
+.container {
+    border-radius: 0.5rem;
+
+}
+
+.name {
+    font-weight: var(--boldweight);
+}
+
+@media (min-width:1000px) {
+    .big-container {
+        display: grid;
+        max-width: 1100px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "one one two three"
+            "four five five three";
+        margin: 5rem auto;
+
+    }
+
+    .first {
+        grid-area: one;
+        background-image: url('images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: top 0px right 60px;
+    }
+
+    .second {
+        grid-area: two;
+    }
+
+    .third {
+        grid-area: four;
+    }
+
+    .fourth {
+        grid-area: five;
+    }
+
+    .fifth {
+        grid-area: three;
+    }
+}
